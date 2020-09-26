@@ -131,7 +131,16 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: rgb(159, 204, 241);
+}
+
+.navber__toggle-btn {
+  position: absolute;
+  right: 32px;
+  top: 24px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
 }
 
 /* Home */
@@ -432,4 +441,39 @@ p {
 
 .contact__title {
   margin: 32px 0;
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navber__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .about__majors__skill {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
 }
