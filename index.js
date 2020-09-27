@@ -35,3 +35,12 @@ const scrollIntoView = (selector) => {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 };
+
+// home領域透明化
+const home = document.querySelector(".content");
+const home_height = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  const opacity = 1 - scrollY / home_height;
+
+  home.style.opacity = opacity;
+});
