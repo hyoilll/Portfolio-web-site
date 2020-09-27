@@ -492,3 +492,29 @@ p {
     flex-grow: 1;
   }
 }
+
+/* Arrow btn */
+.arrow-icon {
+  background-color: var(--color-dark-pink);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: var(--font-large);
+  width: calc(var(--font-large) * 1.2);
+  height: calc(var(--font-large) * 1.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: all var(--animation-duration) ease-in;
+  opacity: 0;
+  /* 보이지 않을 떄는 이벤트 발생 안되게 해놓음 */
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.arrow-icon.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
