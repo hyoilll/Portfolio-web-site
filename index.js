@@ -18,16 +18,20 @@ navbar_menu.addEventListener("click", (e) => {
   const target = e.target;
   const link = target.dataset.link;
 
-  if (link === null) {
+  if (link === undefined) {
     return;
   } else {
-    console.log(e.target.dataset.link);
-  }
-
-  const scrollTo = document.querySelector(link);
-  if (scrollTo === null) {
-    return;
-  } else {
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scrollIntoView(link);
   }
 });
+
+// Contact me Btnを押すとContactMe領域に移動
+const contact_btn = document.querySelector(".home__contact");
+contact_btn.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+const scrollIntoView = (selector) => {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+};
