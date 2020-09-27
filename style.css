@@ -109,12 +109,17 @@ p {
 
 #navbar.navbar--dark {
   background-color: #5175da;
-  padding: 8px;
+  padding: 16px;
   z-index: 1;
 }
 
 .navbar__menu {
   display: flex;
+}
+
+.navbar__menu.open {
+  display: block;
+  background-color: #5175da;
 }
 
 .navbar__logo {
@@ -142,7 +147,7 @@ p {
   background-color: var(--color-blue);
 }
 
-.navber__toggle-btn {
+.navbar__toggle-btn {
   position: absolute;
   right: 32px;
   top: 24px;
@@ -398,7 +403,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-dark-pink);
   font-size: var(--font-medium);
 }
 
@@ -406,11 +411,10 @@ p {
   content: "";
   display: block;
   position: relative;
-  left: 18%;
-  width: 200px;
+  left: 25%;
+  width: 50%;
   height: 2px;
   margin: 10px 0;
-  margin-left: -12px;
   background-color: var(--color-dark-white);
 }
 
@@ -467,41 +471,6 @@ p {
   margin: 32px 0;
 }
 
-/* For below 768px screen width */
-@media screen and (max-width: 768px) {
-  .navber__toggle-btn {
-    display: block;
-  }
-
-  #navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar__menu {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    display: none;
-  }
-
-  .about__majors {
-    flex-direction: column;
-  }
-
-  .about__majors__skill {
-    margin-bottom: 38px;
-  }
-
-  .skillset {
-    flex-direction: column;
-  }
-
-  .project {
-    flex-grow: 1;
-  }
-}
-
 /* Arrow btn */
 .arrow-icon {
   background-color: var(--color-dark-pink);
@@ -526,4 +495,40 @@ p {
 .arrow-icon.visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #5175da;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .about__majors__skill {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
 }

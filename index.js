@@ -21,6 +21,7 @@ navbar_menu.addEventListener("click", (e) => {
   if (link === undefined) {
     return;
   } else {
+    navbar_menu.classList.remove("open");
     scrollIntoView(link);
   }
 });
@@ -65,6 +66,7 @@ workBtn.addEventListener("click", (e) => {
     return;
   }
 
+  // 버튼 선택 설정
   const active = document.querySelector(".category__btn.selected");
   active.classList.remove("selected");
   const target =
@@ -84,6 +86,12 @@ workBtn.addEventListener("click", (e) => {
     });
     projectContainer.classList.remove("anim-out");
   }, 300);
+});
+
+// navbar__toggle-btn
+const toggleBtn = document.querySelector(".navbar__toggle-btn");
+toggleBtn.addEventListener("click", () => {
+  navbar_menu.classList.toggle("open");
 });
 
 const scrollIntoView = (selector) => {
