@@ -94,13 +94,22 @@ p {
 }
 
 /* Navbar */
+
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-blue);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in;
+}
+
+#navbar.navbar--dark {
+  background-color: #5175da;
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -131,7 +140,7 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: rgb(159, 204, 241);
+  background-color: var(--color-blue);
 }
 
 .navber__toggle-btn {
@@ -151,6 +160,7 @@ p {
   background-size: cover;
   padding: 40px;
   text-align: center;
+  padding-top: 120px;
 }
 
 .home__avatar {
@@ -418,7 +428,7 @@ p {
 /* Contact */
 
 #contact {
-  background-color: var(--color-blue);
+  background-color: #5175da;
 }
 
 .contact__title,
