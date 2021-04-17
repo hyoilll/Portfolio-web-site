@@ -1,5 +1,10 @@
 # Portfolio-web-site
- portfolio
+ 概要：自分を紹介するホームページです。
+ 
+ 開発言語・技術
+ -- Html
+ -- Css
+ -- JavaScript
 
 # Link
  https://hyoilll.github.io/Portfolio-web-site/index.html
